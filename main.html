@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <title>Speech Synthesis App</title>
   <style>
-	  body{
+	  body {
 		  font-family: Arial, sans-serif;
 		  padding: 20px;
 		  max-width: 600px;
 		  margin: auto;
 		  background: #f9f9f9;
 	  }
-	  h1{
+	  h1 {
 		  text-align: center;
 		  color: #333;
 	  }
-	  textarea{
+	  textarea {
 		  width: 100%;
 		  height: 150px;
 		  padding: 10px;
@@ -61,8 +61,8 @@
 <script>
   const textInput = document.getElementById('text-input');
   const voiceSelect = document.getElementById('voice-select');
-  const rateInput = document.getElementById('rate);
-  const pitchInput = document.getElementById('pitch')
+  const rateInput = document.getElementById('rate');
+  const pitchInput = document.getElementById('pitch');
   const rateValue = document.getElementById('rate-value');
   const pitchValue = document.getElementById('pitch-value');
   const speakButton = document.getElementById('speak');
@@ -94,7 +94,7 @@
 
 	populateVoices();
 	if (speechSynthesis.onvoiceschanged !== undefined) {
-		speechSynthesis.onvoiceschnaged = populateVoices;
+		speechSynthesis.onvoiceschanged = populateVoices;
 	}
 
 	function speak() {
@@ -126,7 +126,7 @@
 	speakButton.addEventListener('click', speak);
 	stopButton.addEventListnener('click', stop);
 
-	rateInput.addEventLIstener('input', () => {
+	rateInput.addEventListener('input', () => {
 		rateValue.textContent = rateInput.value;
 	});
 
